@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug/
+cmake_ninja_workdir = /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target ribbon_test
 
@@ -46,38 +46,45 @@ cmake_ninja_workdir = /Users/rainnight/CLionProjects/ribbon-filter/cmake-build-d
 
 build cmake_object_order_depends_target_ribbon_test: phony || CMakeFiles/ribbon_test.dir
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib/util/hash.cc || cmake_object_order_depends_target_ribbon_test
+build CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/hash.cc || cmake_object_order_depends_target_ribbon_test
   DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib/util/murmurhash.cc || cmake_object_order_depends_target_ribbon_test
+build CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/murmurhash.cc || cmake_object_order_depends_target_ribbon_test
   DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib/util/xxhash.cc || cmake_object_order_depends_target_ribbon_test
+build CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/xxhash.cc || cmake_object_order_depends_target_ribbon_test
   DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib/util/ribbon_config.cc || cmake_object_order_depends_target_ribbon_test
+build CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/ribbon_config.cc || cmake_object_order_depends_target_ribbon_test
   DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
 
-build CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_demo.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/CLionProjects/ribbon-filter/ribbon-invoke/ribbon_native_invoke_demo.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_demo.cc.o.d
+build CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-invoke/org_example_JNIAdvancedDemo.cpp || cmake_object_order_depends_target_ribbon_test
+  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
+  OBJECT_DIR = CMakeFiles/ribbon_test.dir
+  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-invoke
+
+build CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-invoke/ribbon_native_invoke_simple_demo.cc || cmake_object_order_depends_target_ribbon_test
+  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-invoke
 
@@ -89,7 +96,7 @@ build CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_demo.cc.o: C
 #############################################
 # Link the executable ribbon_test
 
-build ribbon_test: CXX_EXECUTABLE_LINKER__ribbon_test_Debug CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_demo.cc.o
+build ribbon_test: CXX_EXECUTABLE_LINKER__ribbon_test_Debug CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/ribbon_test.dir
   POST_BUILD = :
@@ -102,7 +109,7 @@ build ribbon_test: CXX_EXECUTABLE_LINKER__ribbon_test_Debug CMakeFiles/ribbon_te
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -113,7 +120,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/rainnight/CLionProjects/ribbon-filter -B/Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug
+  COMMAND = cd /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/rainnight/codes/CLionProjects/ribbon-filter -B/Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -129,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug
+# Folder: /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug
 
 build all: phony ribbon_test
 
@@ -140,14 +147,14 @@ build all: phony ribbon_test
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/rainnight/CLionProjects/ribbon-filter/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/rainnight/codes/CLionProjects/ribbon-filter/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/rainnight/CLionProjects/ribbon-filter/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/rainnight/codes/CLionProjects/ribbon-filter/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -52,7 +52,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/rainnight/CLionProjects/ribbon-filter/ribbon-lib"
+					"path" : "/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin"
 				}
 			],
 			"language" : "CXX",
@@ -70,7 +78,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -107,7 +116,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -140,7 +150,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ribbon-invoke/ribbon_native_invoke_demo.cc",
+			"path" : "ribbon-invoke/org_example_JNIAdvancedDemo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ribbon-invoke/ribbon_native_invoke_simple_demo.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

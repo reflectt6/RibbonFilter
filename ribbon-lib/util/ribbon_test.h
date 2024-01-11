@@ -56,62 +56,6 @@ struct StandardKeyGen {
   std::string str_;
 };
 
-// Generate small sequential keys, that can misbehave with sequential seeds
-// as in https://github.com/Cyan4973/xxHash/issues/469.
-// These keys are only heuristically unique, but that's OK with 64 bits,
-// for testing purposes.
-struct SmallKeyGen {
-  SmallKeyGen(const std::string& prefix, uint64_t id) : id_(id) {
-    // Hash the prefix for a heuristically unique offset
-    id_ += ROCKSDB_NAMESPACE::GetSliceHash64(prefix);
-    ROCKSDB_NAMESPACE::PutFixed64(&str_, id_);
-  }
-
-  // Prefix (only one required)
-  SmallKeyGen& operator++() {
-    ++id_;
-    return *this;
-  }
-
-  SmallKeyGen& operator+=(uint64_t i) {
-    id_ += i;
-    return *this;
-  }
-
-  const std::string& operator*() {
-    ROCKSDB_NAMESPACE::EncodeFixed64(&str_[str_.size() - 8], id_);
-    return str_;
-  }
-
-  bool operator==(const SmallKeyGen& other) const { return id_ == other.id_; }
-  bool operator!=(const SmallKeyGen& other) const { return id_ != other.id_; }
-
-  uint64_t id_;
-  std::string str_;
-};
-
-template <typename KeyGen>
-struct Hash32KeyGenWrapper : public KeyGen {
-  Hash32KeyGenWrapper(const std::string& prefix, uint64_t id)
-      : KeyGen(prefix, id) {}
-  uint32_t operator*() {
-    auto& key = *static_cast<KeyGen&>(*this);
-    // unseeded
-    return ROCKSDB_NAMESPACE::GetSliceHash(key);
-  }
-};
-
-template <typename KeyGen>
-struct Hash64KeyGenWrapper : public KeyGen {
-  Hash64KeyGenWrapper(const std::string& prefix, uint64_t id)
-      : KeyGen(prefix, id) {}
-  uint64_t operator*() {
-    auto& key = *static_cast<KeyGen&>(*this);
-    // unseeded
-    return ROCKSDB_NAMESPACE::GetSliceHash64(key);
-  }
-};
-
 using ROCKSDB_NAMESPACE::ribbon::ConstructionFailureChance;
 
 const std::vector<ConstructionFailureChance> kFailureOnly50Pct = {
@@ -237,37 +181,37 @@ struct TypesAndSettings_AllowZeroStarts : public AbridgedTypesAndSettings {
 struct TypesAndSettings_Seed64 : public AbridgedTypesAndSettings {
   using Seed = uint64_t;
 };
-struct TypesAndSettings_Rehasher
-    : public StandardRehasherAdapter<AbridgedTypesAndSettings> {
-  using KeyGen = Hash64KeyGenWrapper<StandardKeyGen>;
-};
-struct TypesAndSettings_Rehasher_Result16 : public TypesAndSettings_Rehasher {
-  using ResultRow = uint16_t;
-};
-struct TypesAndSettings_Rehasher_Result32 : public TypesAndSettings_Rehasher {
-  using ResultRow = uint32_t;
-};
-struct TypesAndSettings_Rehasher_Seed64
-    : public StandardRehasherAdapter<TypesAndSettings_Seed64> {
-  using KeyGen = Hash64KeyGenWrapper<StandardKeyGen>;
-  // Note: 64-bit seed with Rehasher gives slightly better average reseeds
-};
-struct TypesAndSettings_Rehasher32
-    : public StandardRehasherAdapter<TypesAndSettings_Hash32> {
-  using KeyGen = Hash32KeyGenWrapper<StandardKeyGen>;
-};
-struct TypesAndSettings_Rehasher32_Coeff64
-    : public TypesAndSettings_Rehasher32 {
-  using CoeffRow = uint64_t;
-};
-struct TypesAndSettings_SmallKeyGen : public AbridgedTypesAndSettings {
-  // SmallKeyGen stresses the independence of different hash seeds
-  using KeyGen = SmallKeyGen;
-};
-struct TypesAndSettings_Hash32_SmallKeyGen : public TypesAndSettings_Hash32 {
-  // SmallKeyGen stresses the independence of different hash seeds
-  using KeyGen = SmallKeyGen;
-};
+//struct TypesAndSettings_Rehasher
+//    : public StandardRehasherAdapter<AbridgedTypesAndSettings> {
+//  using KeyGen = Hash64KeyGenWrapper<StandardKeyGen>;
+//};
+//struct TypesAndSettings_Rehasher_Result16 : public TypesAndSettings_Rehasher {
+//  using ResultRow = uint16_t;
+//};
+//struct TypesAndSettings_Rehasher_Result32 : public TypesAndSettings_Rehasher {
+//  using ResultRow = uint32_t;
+//};
+//struct TypesAndSettings_Rehasher_Seed64
+//    : public StandardRehasherAdapter<TypesAndSettings_Seed64> {
+//  using KeyGen = Hash64KeyGenWrapper<StandardKeyGen>;
+//  // Note: 64-bit seed with Rehasher gives slightly better average reseeds
+//};
+//struct TypesAndSettings_Rehasher32
+//    : public StandardRehasherAdapter<TypesAndSettings_Hash32> {
+//  using KeyGen = Hash32KeyGenWrapper<StandardKeyGen>;
+//};
+//struct TypesAndSettings_Rehasher32_Coeff64
+//    : public TypesAndSettings_Rehasher32 {
+//  using CoeffRow = uint64_t;
+//};
+//struct TypesAndSettings_SmallKeyGen : public AbridgedTypesAndSettings {
+//  // SmallKeyGen stresses the independence of different hash seeds
+//  using KeyGen = SmallKeyGen;
+//};
+//struct TypesAndSettings_Hash32_SmallKeyGen : public TypesAndSettings_Hash32 {
+//  // SmallKeyGen stresses the independence of different hash seeds
+//  using KeyGen = SmallKeyGen;
+//};
 struct TypesAndSettings_Coeff32 : public DefaultTypesAndSettings {
   using CoeffRow = uint32_t;
 };

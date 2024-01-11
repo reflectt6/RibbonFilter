@@ -150,8 +150,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug",
-		"source" : "/Users/rainnight/CLionProjects/ribbon-filter"
+		"build" : "/Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug",
+		"source" : "/Users/rainnight/codes/CLionProjects/ribbon-filter"
 	},
 	"version" : 
 	{

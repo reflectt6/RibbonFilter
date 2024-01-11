@@ -3,7 +3,9 @@ project(ribbon_filter)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(ribbon-lib)
+include_directories(ribbon-lib
+        $ENV{JAVA_HOME}/include/
+        $ENV{JAVA_HOME}/include/darwin)
 
 #set(SOURCE
 #        util/hash.cc
@@ -17,7 +19,9 @@ set(TESTS
         ribbon-lib/util/murmurhash.cc
         ribbon-lib/util/xxhash.cc
         ribbon-lib/util/ribbon_config.cc
-        ribbon-invoke/ribbon_native_invoke_demo.cc
+#        ribbon-invoke/ribbon_native_invoke_demo.cc
+        ribbon-invoke/org_example_JNIAdvancedDemo.cpp
+        ribbon-invoke/ribbon_native_invoke_simple_demo.cc
         )
 
 #add_library(ribbon_filter SHARED ${SOURCE})

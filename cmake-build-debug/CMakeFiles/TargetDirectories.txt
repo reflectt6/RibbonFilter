@@ -1,3 +1,3 @@
-/Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/ribbon_test.dir
-/Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/rainnight/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/ribbon_test.dir
+/Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
