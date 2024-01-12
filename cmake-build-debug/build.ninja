@@ -38,71 +38,65 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target ribbon_test
+# Object build statements for SHARED_LIBRARY target ribbon_filter
 
 
 #############################################
-# Order-only phony target for ribbon_test
+# Order-only phony target for ribbon_filter
 
-build cmake_object_order_depends_target_ribbon_test: phony || CMakeFiles/ribbon_test.dir
+build cmake_object_order_depends_target_ribbon_filter: phony || CMakeFiles/ribbon_filter.dir
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/hash.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
+build CMakeFiles/ribbon_filter.dir/ribbon-lib/hash.cc.o: CXX_COMPILER__ribbon_filter_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/hash.cc || cmake_object_order_depends_target_ribbon_filter
+  DEFINES = -Dribbon_filter_EXPORTS
+  DEP_FILE = CMakeFiles/ribbon_filter.dir/ribbon-lib/hash.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fPIC -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/. -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
+  OBJECT_DIR = CMakeFiles/ribbon_filter.dir
+  OBJECT_FILE_DIR = CMakeFiles/ribbon_filter.dir/ribbon-lib
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/murmurhash.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
+build CMakeFiles/ribbon_filter.dir/ribbon-lib/xxhash.cc.o: CXX_COMPILER__ribbon_filter_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/xxhash.cc || cmake_object_order_depends_target_ribbon_filter
+  DEFINES = -Dribbon_filter_EXPORTS
+  DEP_FILE = CMakeFiles/ribbon_filter.dir/ribbon-lib/xxhash.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fPIC -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/. -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
+  OBJECT_DIR = CMakeFiles/ribbon_filter.dir
+  OBJECT_FILE_DIR = CMakeFiles/ribbon_filter.dir/ribbon-lib
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/xxhash.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
+build CMakeFiles/ribbon_filter.dir/ribbon-lib/ribbon_config.cc.o: CXX_COMPILER__ribbon_filter_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/ribbon_config.cc || cmake_object_order_depends_target_ribbon_filter
+  DEFINES = -Dribbon_filter_EXPORTS
+  DEP_FILE = CMakeFiles/ribbon_filter.dir/ribbon-lib/ribbon_config.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fPIC -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/. -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
+  OBJECT_DIR = CMakeFiles/ribbon_filter.dir
+  OBJECT_FILE_DIR = CMakeFiles/ribbon_filter.dir/ribbon-lib
 
-build CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib/util/ribbon_config.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-lib/util
-
-build CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-invoke/org_example_JNIAdvancedDemo.cpp || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-invoke
-
-build CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o: CXX_COMPILER__ribbon_test_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-invoke/ribbon_native_invoke_simple_demo.cc || cmake_object_order_depends_target_ribbon_test
-  DEP_FILE = CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
-  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-lib -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
-  OBJECT_FILE_DIR = CMakeFiles/ribbon_test.dir/ribbon-invoke
+build CMakeFiles/ribbon_filter.dir/ribbon-invoke/org_apache_hadoop_hbase_util_RibbonHelper.cpp.o: CXX_COMPILER__ribbon_filter_Debug /Users/rainnight/codes/CLionProjects/ribbon-filter/ribbon-invoke/org_apache_hadoop_hbase_util_RibbonHelper.cpp || cmake_object_order_depends_target_ribbon_filter
+  DEFINES = -Dribbon_filter_EXPORTS
+  DEP_FILE = CMakeFiles/ribbon_filter.dir/ribbon-invoke/org_apache_hadoop_hbase_util_RibbonHelper.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fPIC -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/rainnight/codes/CLionProjects/ribbon-filter/. -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include -I/Users/rainnight/Library/Java/JavaVirtualMachines/azul-1.8.0_332/Contents/Home/include/darwin
+  OBJECT_DIR = CMakeFiles/ribbon_filter.dir
+  OBJECT_FILE_DIR = CMakeFiles/ribbon_filter.dir/ribbon-invoke
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target ribbon_test
+# Link build statements for SHARED_LIBRARY target ribbon_filter
 
 
 #############################################
-# Link the executable ribbon_test
+# Link the shared library libribbon_filter.dylib
 
-build ribbon_test: CXX_EXECUTABLE_LINKER__ribbon_test_Debug CMakeFiles/ribbon_test.dir/ribbon-lib/util/hash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/murmurhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/xxhash.cc.o CMakeFiles/ribbon_test.dir/ribbon-lib/util/ribbon_config.cc.o CMakeFiles/ribbon_test.dir/ribbon-invoke/org_example_JNIAdvancedDemo.cpp.o CMakeFiles/ribbon_test.dir/ribbon-invoke/ribbon_native_invoke_simple_demo.cc.o
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
-  OBJECT_DIR = CMakeFiles/ribbon_test.dir
+build libribbon_filter.dylib: CXX_SHARED_LIBRARY_LINKER__ribbon_filter_Debug CMakeFiles/ribbon_filter.dir/ribbon-lib/hash.cc.o CMakeFiles/ribbon_filter.dir/ribbon-lib/xxhash.cc.o CMakeFiles/ribbon_filter.dir/ribbon-lib/ribbon_config.cc.o CMakeFiles/ribbon_filter.dir/ribbon-invoke/org_apache_hadoop_hbase_util_RibbonHelper.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/ribbon_filter.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = ribbon_test
-  TARGET_PDB = ribbon_test.dbg
+  SONAME = libribbon_filter.dylib
+  SONAME_FLAG = -install_name
+  TARGET_FILE = libribbon_filter.dylib
+  TARGET_PDB = ribbon_filter.dylib.dbg
 
 
 #############################################
@@ -130,6 +124,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build ribbon_filter: phony libribbon_filter.dylib
+
 # =============================================================================
 # Folder targets.
 
@@ -138,7 +134,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/rainnight/codes/CLionProjects/ribbon-filter/cmake-build-debug
 
-build all: phony ribbon_test
+build all: phony libribbon_filter.dylib
 
 # =============================================================================
 # Built-in targets

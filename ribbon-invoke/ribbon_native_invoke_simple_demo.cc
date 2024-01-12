@@ -5,18 +5,15 @@
 
 #include "ribbon_demo.h"
 
-using namespace RIBBON_COMPILE_BLOOM;
+using namespace RIBBON_FILTER;
 
 void testISoln() {
     using TypeParam = Settings_Coeff128_Homog;
-
     IMPORT_RIBBON_TYPES_AND_SETTINGS(TypeParam);
     IMPORT_RIBBON_IMPL_TYPES(TypeParam);
 
     Index num_slots = 131072;
     uint32_t num_to_add = 109306;
-    double overhead_ratio = 1.0 * num_slots / num_to_add;
-
 
     uint32_t max_ibytes = static_cast<uint32_t>(sizeof(ResultRow) * num_slots);
 

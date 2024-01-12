@@ -5,51 +5,58 @@
 #ifndef ROCKSDB_RIBBON_COMPILE_BLOOM_H
 #define ROCKSDB_RIBBON_COMPILE_BLOOM_H
 
-#include "util/ribbon_test.h"
+#include <stdint.h>
+#include "ribbon-lib/ribbon_config.h"
+#include "ribbon-lib/ribbon_impl.h"
+#include "ribbon-lib/slice.h"
+#include "ribbon-lib/hash.h"
 
-namespace RIBBON_COMPILE_BLOOM {
+namespace RIBBON_FILTER {
 
-using namespace RIBBON_TEST;
-//using namespace HBASE_BLOOM_NAMESPACE;
+    using ROCKSDB_NAMESPACE::ribbon::ConstructionFailureChance;
 
-using namespace ROCKSDB_NAMESPACE;
-using namespace ROCKSDB_NAMESPACE::ribbon;
+    const std::vector<ConstructionFailureChance> kFailureOnly50Pct = {
+            ROCKSDB_NAMESPACE::ribbon::kOneIn2};
 
-// HBase Bloom
-uint32_t chunkByteSizeHint = 128 * 1024; //"io.storefile.bloom.block.size"
-// Maximum number of times a Bloom filter can be "folded" if oversized
-uint32_t foldFactor = 7; //"io.storefile.bloom.max.fold"
-double errorRate = 0.01; //"io.storefile.bloom.error.rate");
+    const std::vector<ConstructionFailureChance> kFailureOnlyRare = {
+            ROCKSDB_NAMESPACE::ribbon::kOneIn1000};
 
-// param for test
-uint32_t testRowLength = 32; // "hbase row length for test");
+    const std::vector<ConstructionFailureChance> kFailureAll = {
+            ROCKSDB_NAMESPACE::ribbon::kOneIn2, ROCKSDB_NAMESPACE::ribbon::kOneIn20,
+            ROCKSDB_NAMESPACE::ribbon::kOneIn1000};
 
-// ribbon
-uint32_t FLAGS_thoroughness = 5;
-uint32_t FLAGS_max_add = 0;
-uint32_t FLAGS_min_check = 4000;
-uint32_t FLAGS_max_check = 100000;
+    struct DefaultTypesAndSettings {
+        using CoeffRow = ROCKSDB_NAMESPACE::Unsigned128;
+        using ResultRow = uint8_t;
+        using Index = uint32_t;
+        using Hash = uint64_t;
+        using Seed = uint32_t;
+        using Key = Slice;
+        static constexpr bool kIsFilter = true;
+        static constexpr bool kHomogeneous = false;
+        static constexpr bool kFirstCoeffAlwaysOne = true;
+        static constexpr bool kUseSmash = false;
+        static constexpr bool kAllowZeroStarts = false;
+        static Hash HashFn(const Key& key, uint64_t raw_seed) {
+            // This version 0.7.2 preview of XXH3 (a.k.a. XXPH3) function does
+            // not pass SmallKeyGen tests below without some seed premixing from
+            // StandardHasher. See https://github.com/Cyan4973/xxHash/issues/469
+            return ROCKSDB_NAMESPACE::Hash64(key.data(), key.size(), raw_seed);
+        }
+        // For testing
+        static const std::vector<ConstructionFailureChance>& FailureChanceToTest() {
+            return kFailureAll;
+        }
+    };
 
+    struct Settings_Coeff128_Homog : public DefaultTypesAndSettings {
+        static constexpr bool kHomogeneous = true;
+        static constexpr bool kUseSmash = false;
 
-struct RibbonCompileBloomDefaultSettings : public DefaultTypesAndSettings {
-  static constexpr bool kHomogeneous = false;
-  static constexpr bool kUseSmash = false;
-};
-
-struct Settings_Coeff128_Homog : public DefaultTypesAndSettings {
-  static constexpr bool kHomogeneous = true;
-  static constexpr bool kUseSmash = false;
-  static const std::vector<ConstructionFailureChance>& FailureChanceToTest() {
-    return kFailureOnlyRare;
-  }
-};
-
-
-struct Settings_Coeff128Smash_Homog : public Settings_Coeff128_Homog {
-  static constexpr bool kUseSmash = true;
-};
-
+        static const std::vector<ConstructionFailureChance> &FailureChanceToTest() {
+            return kFailureOnlyRare;
+        }
+    };
 
 } // namespace
-
-#endif  // ROCKSDB_RIBBON_COMPILE_BLOOM_H
+#endif
