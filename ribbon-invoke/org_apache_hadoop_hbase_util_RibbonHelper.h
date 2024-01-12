@@ -43,6 +43,54 @@ JNIEXPORT jboolean JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_filter
 
 /*
  * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    printDuration
+ * Signature: ()Z
+ */
+JNIEXPORT void JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_printDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    getAddDuration
+ * Signature: ()D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_getAddDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    getBackSubstDuration
+ * Signature: ()D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_getBackSubstDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    getQueryDuration
+ * Signature: ()D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_getQueryDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    getStringToCharsDuration
+ * Signature: ()D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_getStringToCharsDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
+ * Method:    getInitDuration
+ * Signature: ()D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_hadoop_hbase_util_RibbonHelper_getInitDuration
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_hbase_util_RibbonHelper
  * Method:    close
  * Signature: ()V
  */
