@@ -58,5 +58,14 @@ namespace RIBBON_FILTER {
         }
     };
 
+    struct tmp_Settings : public DefaultTypesAndSettings {
+        static constexpr bool kHomogeneous = true;
+        static constexpr bool kUseSmash = true;
+
+        static const std::vector<ConstructionFailureChance> &FailureChanceToTest() {
+            return kFailureOnlyRare;
+        }
+    };
+
 } // namespace
 #endif

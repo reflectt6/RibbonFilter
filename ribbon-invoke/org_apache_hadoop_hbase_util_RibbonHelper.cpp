@@ -4,7 +4,7 @@
 #include "org_apache_hadoop_hbase_util_RibbonHelper.h"
 #include <chrono>
 
-using TypeParam = Settings_Coeff128_Homog;
+using TypeParam = tmp_Settings;
 IMPORT_RIBBON_TYPES_AND_SETTINGS(TypeParam);
 IMPORT_RIBBON_IMPL_TYPES(TypeParam);
 
