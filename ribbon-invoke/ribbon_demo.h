@@ -67,5 +67,24 @@ namespace RIBBON_FILTER {
         }
     };
 
+    struct tmp_Settings2 : public DefaultTypesAndSettings{
+        using Key = Hash;
+        static constexpr bool kHomogeneous = true;
+        static constexpr bool kUseSmash = true;
+        static Hash HashFn(const Hash& key, uint64_t raw_seed) {
+            return (key ^ raw_seed) * kRehashFactor;
+        }
+
+        static Hash HashFn2(const Slice& key, uint64_t raw_seed) {
+            // This version 0.7.2 preview of XXH3 (a.k.a. XXPH3) function does
+            // not pass SmallKeyGen tests below without some seed premixing from
+            // StandardHasher. See https://github.com/Cyan4973/xxHash/issues/469
+            return ROCKSDB_NAMESPACE::Hash64(key.data(), key.size(), raw_seed);
+        }
+    private:
+        static constexpr Hash kRehashFactor =
+                static_cast<Hash>(0x6193d459236a3a0dULL);
+    };
+
 } // namespace
 #endif
